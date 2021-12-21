@@ -20,6 +20,7 @@
 		3A449DB827607DB900610603 /* My_DogsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A449DB727607DB900610603 /* My_DogsUITestsLaunchTests.swift */; };
 		3A449DC5276090C000610603 /* addpicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A449DC4276090C000610603 /* addpicViewController.swift */; };
 		3A449DC7276090CE00610603 /* editpicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A449DC6276090CE00610603 /* editpicViewController.swift */; };
+		3A63E5BF2771D7A800205C27 /* dogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63E5BE2771D7A800205C27 /* dogCollectionViewCell.swift */; };
 		7E7AD6FA9F6629497A7B70A4 /* Pods_My_DogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00354F23E00006F7DC2D28C3 /* Pods_My_DogsTests.framework */; };
 		C61B31F31A65773D80DAADAA /* Pods_My_Dogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CB21E83955A26F9022F476 /* Pods_My_Dogs.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		3A449DB727607DB900610603 /* My_DogsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_DogsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3A449DC4276090C000610603 /* addpicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addpicViewController.swift; sourceTree = "<group>"; };
 		3A449DC6276090CE00610603 /* editpicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editpicViewController.swift; sourceTree = "<group>"; };
+		3A63E5BE2771D7A800205C27 /* dogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogCollectionViewCell.swift; sourceTree = "<group>"; };
 		656ACFEA872DE0B398D0E98E /* Pods-My Dogs-My DogsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Dogs-My DogsUITests.release.xcconfig"; path = "Target Support Files/Pods-My Dogs-My DogsUITests/Pods-My Dogs-My DogsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D8486954CC5FFB871265236 /* Pods-My Dogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Dogs.release.xcconfig"; path = "Target Support Files/Pods-My Dogs/Pods-My Dogs.release.xcconfig"; sourceTree = "<group>"; };
 		C4CB21E83955A26F9022F476 /* Pods_My_Dogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Dogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				3A449D9327607DB700610603 /* SceneDelegate.swift */,
 				3A449D9527607DB700610603 /* ViewController.swift */,
 				3A449D9727607DB700610603 /* Main.storyboard */,
+				3A63E5BE2771D7A800205C27 /* dogCollectionViewCell.swift */,
 				3A449DC4276090C000610603 /* addpicViewController.swift */,
 				3A449DC6276090CE00610603 /* editpicViewController.swift */,
 				3A449D9D27607DB900610603 /* Assets.xcassets */,
@@ -385,6 +388,7 @@
 				3A449DC7276090CE00610603 /* editpicViewController.swift in Sources */,
 				3A449D9C27607DB700610603 /* My_Dogs.xcdatamodeld in Sources */,
 				3A449D9427607DB700610603 /* SceneDelegate.swift in Sources */,
+				3A63E5BF2771D7A800205C27 /* dogCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ class addpicViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     @IBOutlet weak var food: UITextField!
     @IBOutlet weak var img: UIImageView!
     
-    var cr: NSManagedObjectContext?
+    let cr=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var imgp=UIImagePickerController()
     var con=false
     
@@ -30,14 +30,14 @@ class addpicViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         print(con)
         if(con){
             print("here")
-            let dog=Dog(context: cr!)
+            let dog=Dog(context: cr)
             dog.name=String(name.text!)
             dog.color=String(color.text!)
             dog.food=String(food.text!)
-            dog.img=img.image?.pngData()
+            dog.img=img.image?.jpegData(compressionQuality: 1)
             
             do{
-                try cr?.save()
+                try cr.save()
                 print("saved")
             }catch{
                 print("fuck there is error \(error)")
@@ -50,7 +50,7 @@ class addpicViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     @IBAction func addimg(_ sender: UIButton) {
         imgp.delegate = self
-        imgp.allowsEditing=false
+        imgp.allowsEditing=true
         imgp.sourceType = .photoLibrary
         present(imgp, animated: true, completion: nil)
     }
@@ -62,18 +62,19 @@ class addpicViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         }
         con=true
         do{
-        try cr?.save()
+            try cr.save()
         }catch{
             print(error)
         }
-        if cr!.hasChanges {
+        if cr.hasChanges {
             do {
-                try cr!.save()
+                try cr.save()
                 print("Success")
             } catch {
                 print("\(error)")
             }
         }
+        picker.dismiss(animated: true, completion: nil)
         
     }
      

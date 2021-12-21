@@ -4,6 +4,12 @@
 //
 //  Created by faisal on 04/05/1443 AH.
 //
+//
+//
+//
+//
+//
+//image doesn`t show in collection view list
 
 import UIKit
 import CoreData
@@ -38,7 +44,7 @@ class ViewController: UIViewController {
         
         if segue.identifier=="add"{
            let seg = segue.destination as! addpicViewController
-            seg.cr=cr
+            
             
             
         }else if segue.identifier=="edit"{
@@ -59,8 +65,12 @@ extension ViewController:UICollectionViewDataSource , UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = colv.dequeueReusableCell(withReuseIdentifier: "main", for: indexPath)
+        let cell = colv.dequeueReusableCell(withReuseIdentifier: "main", for: indexPath) as! dogCollectionViewCell
         
+        if let image = list[indexPath.item].img {
+                    cell.img.image = UIImage(data: image)
+                }
+        cell.tit.text=list[indexPath.row].name
         
         return cell
     }

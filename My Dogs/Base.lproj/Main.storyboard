@@ -30,7 +30,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="main" id="hVO-oV-a5t">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="main" id="hVO-oV-a5t" customClass="dogCollectionViewCell" customModule="My_Dogs" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RA0-eY-s5P">
@@ -60,6 +60,8 @@
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="195" height="200"/>
                                                 <connections>
+                                                    <outlet property="img" destination="7Wz-RA-1TE" id="pPb-IT-T31"/>
+                                                    <outlet property="tit" destination="9Hp-Ea-5rn" id="hh2-eQ-PF4"/>
                                                     <segue destination="ke6-Lh-SeJ" kind="show" identifier="edit" id="X3o-s3-AWO"/>
                                                 </connections>
                                             </collectionViewCell>
